@@ -108,7 +108,7 @@ st.markdown(""" <style> .font4 {
 #     mail = outlook.CreateItem(0)
 #     recipients = yaml_inputs['email_list']
 #     mail.To = ';'.join(recipients)
-#     mail.Subject = f"User: {user_id} subscription key request for Virtual Assist"
+#     mail.Subject = f"User: {user_id} subscription key request for Chat Bot"
 #     mail.HTMLBody = f"User: {user_id} is requesting for new subscription key<br><br>&nbsp;<br>"
 #     mail.Send()
 #     return True
@@ -176,7 +176,7 @@ if 'past' not in st.session_state:
     st.session_state['past'] = ['Hi! I am User']
 
 if 'extras_generated' not in st.session_state:
-    st.session_state['extras_generated'] = ['Hi! I am Virtual Assist. Let me know how can I assist you?']
+    st.session_state['extras_generated'] = ['Hi! I am Chat Bot. Let me know how can I assist you?']
 
 if 'references' not in st.session_state:
     st.session_state['references'] = []
@@ -340,7 +340,7 @@ elif (choose=='Contact'):
 
 
 elif (choose=="Chatbot"):
-    st.markdown("<h1 style='text-align: center; color: #1E345C;'>Virtual Assist</h1>",
+    st.markdown("<h1 style='text-align: center; color: #1E345C;'>Chat Bot with LLM</h1>",
                     unsafe_allow_html=True)
 
     # st.markdown("<h5 style='text-align: center; color: black;'>Hello...Before we start, can you please select the country and the"
@@ -453,7 +453,7 @@ elif (choose=="Chatbot"):
         if reset:
             st.session_state['generated'] = []
             st.session_state['past'] = ['Hi! I am User']
-            st.session_state['extras_generated'] = ['Hi! I am Virtual Assist. Let me know how can I assist you?']
+            st.session_state['extras_generated'] = ['Hi! I am Chat Bot. Let me know how can I assist you?']
             st.session_state['references']=[]
             qbot.clear_chathistory()
 
